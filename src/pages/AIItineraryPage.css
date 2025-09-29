@@ -1,0 +1,165 @@
+.ai-itinerary-bg {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 45px 0;
+}
+.ai-itinerary-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 44px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ai-form-col,
+.ai-result-col {
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 1px 18px rgba(20,40,60,0.06);
+  padding: 38px 32px 36px 32px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+.ai-title-main {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 7px;
+  color: #0f2639;
+}
+.ai-subtitle {
+  color: #5b649b;
+  margin-bottom: 26px;
+  font-size: 1.04rem;
+}
+
+.ai-itinerary-form label {
+  font-weight: 600;
+  color: #283d67;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  display: block;
+  font-size: 1rem;
+}
+.ai-itinerary-form input,
+.ai-itinerary-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 13px 15px;
+  font-size: 1rem;
+  border: 1.3px solid #cee7fd;
+  border-radius: 7px;
+  background: #f6fafd;
+  color: #1f3546;
+  transition: border 0.16s;
+}
+.ai-itinerary-form input:focus,
+.ai-itinerary-form textarea:focus {
+  border: 1.6px solid #098cff;
+  outline: none;
+}
+.generate-btn {
+  background: #0da0fa;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 9px;
+  border: none;
+  margin-top: 16px;
+  font-size: 1.17rem;
+  padding: 15px 0;
+  cursor: pointer;
+  box-shadow: 0 1px 9px rgba(0,135,255,0.06);
+  transition: background 0.17s;
+}
+.generate-btn:disabled {
+  background: #b1e1ff;
+  cursor: not-allowed;
+}
+.ai-error {
+  color: #c21531;
+  margin-top: 14px;
+  padding: 7px 0 2px 0;
+  font-size: 1.05rem;
+}
+.ai-result-col {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+.ai-result-title {
+  font-weight: 700;
+  font-size: 1.18rem;
+  margin-bottom: 25px;
+  color: #0e205a;
+}
+.ai-result-block {
+  min-height: 300px;
+  margin-top: 9px;
+}
+.ai-day-block {
+  margin-bottom: 24px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e0ecfa;
+}
+.ai-day-title {
+  color: #164dad;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.12rem;
+}
+.ai-activity-li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 9px;
+  color: #186cfa;
+  font-size: 1.07rem;
+}
+.ai-dot {
+  color: #53c7ff;
+  font-size: 1.14rem;
+  padding-top: 2px;
+}
+.ai-result-loading {
+  color: #218ad8;
+  font-size: 1.09rem;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 9px;
+}
+.ai-placeholder {
+  margin-top: 5px;
+}
+.ai-placeholder-bar {
+  height: 18px;
+  background: #eaf2fa;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.ai-placeholder-gap {
+  height: 20px;
+}
+
+@media (max-width:1100px) {
+  .ai-itinerary-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .ai-form-col, .ai-result-col {
+    width: 95vw;
+    max-width: 620px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  .ai-result-col {padding-left:4vw; padding-right:4vw;}
+}
+@media (max-width:660px) {
+  .ai-form-col, .ai-result-col {
+    padding: 18px 7vw;
+    border-radius: 8px;
+  }
+  .ai-itinerary-bg {
+    padding: 9px 0;
+  }
+}

@@ -1,0 +1,242 @@
+.journal-modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(50,70,115,0.12);
+  z-index: 11; display: flex;
+  justify-content: center; align-items: center;
+}
+.journal-modal-content {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 6px 48px #32326424;
+  padding: 36px 32px 28px 32px;
+  width: 95vw;
+  max-width: 700px;
+  min-width: 350px;
+  position: relative;
+}
+.journal-close-btn {
+  position: absolute; top: 12px; right: 17px;
+  background: none; border: none; font-size: 2rem;
+  cursor: pointer; color: #aaa;
+}
+.journal-form { display: flex; flex-direction: column; }
+.journal-title {
+  text-align: center; font-size:1.44em;
+  font-weight: 800; margin-bottom: 4px;
+}
+.journal-subtitle {
+  text-align: center; color: #7c7c8e; margin-bottom: 30px;
+}
+label { font-weight: 500; margin:16px 0 5px 0; }
+input, textarea {
+  background: #f8f9fd;
+  border: 1.3px solid #e3e6eb;
+  border-radius: 9px;
+  padding: 13px 12px;
+  font-size: 1.03em;
+  margin-bottom: 4px;
+  outline: none;
+}
+textarea { resize: vertical; }
+.journal-row {
+  display: flex; gap: 12px;
+}
+.journal-half { flex: 1 1 0; }
+.journal-upload-area {
+  border: 2px dashed #bac4e6;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 28px 8px 10px 8px;
+  font-size: 1.06em;
+  text-align: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.upload-highlight { color: #22a4fd; font-weight: 500; }
+.upload-note { font-size:.96em; color: #8e97a9;}
+.selected-files { font-size: .93em; color: #2a2a63; margin-top:4px; }
+.journal-itinerary-note {
+  font-size: 0.98em;
+  color: #babaca;
+  margin-bottom: 0;
+  margin-top: -3px;
+}
+.journal-checkbox-row {
+  display: flex; align-items:flex-start; margin: 10px 0 20px 0;
+}
+.journal-checkbox-row input[type="checkbox"] {
+  margin-top: 4px; margin-right: 6px;
+  accent-color: #22a4fd;
+}
+.checkbox-desc { font-weight:400; color:#888;font-size:0.98em;}
+.journal-submit-btn {
+  background: #22a4fd;
+  color: #fff;
+  border-radius: 9px;
+  margin-top: 15px;
+  padding: 13px 0;
+  font-size: 1.11em;
+  font-weight: 600;
+  border:none;
+  cursor:pointer;
+  transition:background 0.11s;
+}
+.journal-submit-btn:hover {
+  background: #1686c7;
+}
+
+.journal-create-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 48px;
+}
+
+.journal-itinerary-structured {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(16,24,40,0.08);
+  padding: 24px 18px 16px 18px;
+  margin-bottom: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 470px;
+}
+
+.itinerary-day-row {
+  background: #fafbfc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 16px 12px 10px 12px;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+.itinerary-row-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.itinerary-day-input {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1.5px solid #e1e8ee;
+  padding: 10px 12px;
+  border-radius: 6px;
+  flex: 1;
+  margin-right: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.18s;
+}
+.itinerary-day-input:focus {
+  border: 1.5px solid #5e8fff;
+}
+
+.remove-day-btn {
+  background: #f0f2f5;
+  border: none;
+  color: #8a99ad;
+  padding: 7px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+.remove-day-btn:enabled:hover {
+  background: #fbeaea;
+  color: #da2c38;
+}
+.remove-day-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.itinerary-activities {
+  margin-left: 5px;
+}
+
+.itinerary-activity-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.itinerary-activity-input {
+  flex: 1;
+  border: 1px solid #e1e8ee;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 1rem;
+  background: #f7fafc;
+  margin-right: 10px;
+  outline: none;
+  transition: border 0.18s;
+}
+.itinerary-activity-input:focus {
+  background: #fff;
+  border: 1.5px solid #5e8fff;
+}
+.remove-activity-btn {
+  background: #f1f1f4;
+  border: none;
+  color: #b8b6b7;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.remove-activity-btn:enabled:hover {
+  background: #ffe7e4;
+  color: #c9184a;
+}
+.remove-activity-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.add-activity-btn,
+.add-day-btn {
+  font-size: 1rem;
+  padding: 6px 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  color: #367cff;
+  border: 1.3px solid #cde0fd;
+  background: linear-gradient(90deg,#eaf5ff 0,#f5fcff 100%);
+  margin-bottom: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.19s, border 0.18s;
+}
+.add-activity-btn:hover,
+.add-day-btn:hover {
+  background: #eff8ff;
+  border: 1.3px solid #5e8fff;
+}
+
+.journal-itinerary-json-preview {
+  background: #fafafd;
+  border: 1px solid #e5eaf2;
+  border-radius: 7px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 0.97rem;
+  color: #505770;
+  padding: 8px 10px 8px 18px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .journal-itinerary-structured {
+    padding: 11px 2px 10px 6px;
+  }
+}
