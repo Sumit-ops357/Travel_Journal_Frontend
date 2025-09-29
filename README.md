@@ -1,7 +1,16 @@
 # Getting Started with Create React App
 
 
-**Deployed Link:** [https://travel-journal-frontend.vercel.app/](https://travel-journal-frontend.vercel.app/)
+
+
+## Deployed Link:- [https://travel-journal-frontend.vercel.app/](https://travel-journal-frontend.vercel.app/)
+
+
+
+
+### Note:-
+The response will take time since the backend is deployed in render
+
 
 
 
