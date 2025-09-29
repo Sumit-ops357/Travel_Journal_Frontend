@@ -30,7 +30,7 @@ export default function AIRecommendationPage() {
         interests: form.interests.split(",").map(x => x.trim()).filter(Boolean) // convert to array
       };
 
-      const response = await fetch(`${apiUrl}/api/ai/recommendations`, {
+      const response = await fetch(`${apiUrl}api/ai/recommendations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

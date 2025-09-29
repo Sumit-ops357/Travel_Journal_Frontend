@@ -17,7 +17,7 @@ export default function EditProfile() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`${apiUrl}/api/users/${userId}`, {
+    axios.get(`${apiUrl}api/users/${userId}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => {
@@ -44,7 +44,7 @@ export default function EditProfile() {
     setError("");
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/users/${userId}`, {
+      await axios.put(`${apiUrl}api/users/${userId}`, {
         username: form.username,
         email: form.email,
         avatar: form.avatar

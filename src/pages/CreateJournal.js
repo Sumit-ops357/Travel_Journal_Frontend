@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import api from "../api";
 import "./CreateJournal.css";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function CreateJournal() {
   const [form, setForm] = useState({
@@ -58,11 +58,11 @@ export default function CreateJournal() {
         const fd = new FormData();
         fd.append("file", file);
         const resp = await api.post(
-          `${apiUrl}/photos`,
+          "/photos",
           fd,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
-        photoUrls.push(`/api/photos/${resp.data.fileId}`);
+        photoUrls.push(`api/photos/${resp.data.fileId}`);
       }
 
       // 2. Prepare journal data object
@@ -79,7 +79,7 @@ export default function CreateJournal() {
       // 3. Get JWT token and submit journal (with Authorization header)
       const token = localStorage.getItem("jwt");
 
-      await api.post("/journals", journalData, {
+      await api.post("journals", journalData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

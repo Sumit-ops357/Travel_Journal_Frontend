@@ -19,7 +19,7 @@ export default function MyProfile() {
       setLoading(false);
       return;
     }
-    axios.get(`${apiUrl}/api/users/${userId}`, {
+    axios.get(`${apiUrl}api/users/${userId}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => {

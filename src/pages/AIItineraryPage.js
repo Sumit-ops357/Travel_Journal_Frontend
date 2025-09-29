@@ -37,7 +37,7 @@ export default function AIItineraryPage() {
         interests: form.interests.split(",").map(x => x.trim()).filter(Boolean), // To array
       };
 
-      const response = await fetch(`${apiUrl}/api/ai/itinerary`, {
+      const response = await fetch(`${apiUrl}api/ai/itinerary`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
